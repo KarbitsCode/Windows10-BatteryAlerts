@@ -1,8 +1,10 @@
 from psutil import sensors_battery
 from win10toast import ToastNotifier
+from pyautogui import alert
 from time import sleep
 import keyboard
 import sys
+import os
 
 toast = ToastNotifier()
 charging_toast = 0
@@ -14,6 +16,7 @@ running = 1
 def flip():
     global running
     running = not running
+    alert(f"Running status changed to: {bool(running)}", os.path.basename(__file__))
 
 keyboard.add_hotkey('ctrl+shift+alt+o', flip)
 
