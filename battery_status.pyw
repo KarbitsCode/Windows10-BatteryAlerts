@@ -1,6 +1,6 @@
 from psutil import sensors_battery
 from win10toast import ToastNotifier
-from pyautogui import alert
+from pymsgbox import alert
 from time import sleep
 import keyboard
 import sys
