@@ -1,4 +1,6 @@
+setuptools<80
 win10toast
 psutil
 keyboard
 pymsgbox
+pyinstaller
