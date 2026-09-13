@@ -29,28 +29,27 @@ while running:
         uncharged_toast = 0
         in80charged_toast = 1
         fullycharged_toast = 0
-        toast.show_toast('Charging Status🔌', 'Laptop is still charging. Current charge: ' + percent + '%', sys.executable, 10)
+        toast.show_toast('Charging Status🔌', 'Laptop is still charging. Current charge: ' + percent + '%', duration=10)
         print(charging_toast, uncharged_toast, in80charged_toast, fullycharged_toast)
     if plugged and percent != '100' and charging_toast == 0 and in80charged_toast == 0:
         charging_toast = 1
         uncharged_toast = 0
         in80charged_toast = 0
         fullycharged_toast = 0
-        toast.show_toast('Charging Status🔌', 'Laptop is now charging. Current charge: ' + percent + '%', sys.executable, 10)
+        toast.show_toast('Charging Status🔌', 'Laptop is now charging. Current charge: ' + percent + '%', duration=10)
         print(charging_toast, uncharged_toast, in80charged_toast, fullycharged_toast)
     if not plugged and percent != '100' and uncharged_toast == 0:
         charging_toast = 0
         uncharged_toast = 1
         in80charged_toast = 0
         fullycharged_toast = 0
-        toast.show_toast('Charging Status🔌', 'Laptop is uncharged. Current charge: ' + percent + '%', sys.executable, 10)
+        toast.show_toast('Charging Status🔌', 'Laptop is uncharged. Current charge: ' + percent + '%', duration=10)
         print(charging_toast, uncharged_toast, in80charged_toast, fullycharged_toast)
     if plugged and percent == '100' and fullycharged_toast == 0:
         charging_toast = 0
         uncharged_toast = 0
         in80charged_toast = 0
         fullycharged_toast = 1
-        toast.show_toast('Charging Status🔋', 'Fully charged! Unplug your laptop.', sys.executable, 10)
+        toast.show_toast('Charging Status🔋', 'Fully charged! Unplug your laptop.', duration=10)
         print(charging_toast, uncharged_toast, in80charged_toast, fullycharged_toast)
-    sleep(1)
-    
+    sleep(2)
