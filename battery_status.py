@@ -53,3 +53,4 @@ while running:
         toast.show_toast('Charging Status🔋', 'Fully charged! Unplug your laptop.', duration=10)
         print(charging_toast, uncharged_toast, in80charged_toast, fullycharged_toast)
     sleep(2)
+
