@@ -1,5 +1,5 @@
 win10toast@git+https://github.com/KarbitsCode/win10toast.git
 psutil
-keyboard
+pynput
 pymsgbox
 nuitka
